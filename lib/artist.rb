@@ -23,6 +23,7 @@ class Artist
    artist = self.all.find { |a| a.name == name}
     if artist == nil 
       artist = Artist.new(name)
+      artist.save
     end
     artist
   end 
