@@ -26,6 +26,8 @@ class Artist
       new_artist = self.new(name)
       new_artist.save
       new_artist
+    else
+      artist
     end
   end 
   
