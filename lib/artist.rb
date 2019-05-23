@@ -9,6 +9,7 @@ class Artist
   
   def add_song(title)
     @songs << title
+    
   end
   
   def save
