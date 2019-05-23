@@ -21,14 +21,12 @@ class Artist
   end 
   
   def self.find_or_create_by_name(name)
-      artist = self.all.find { |art| art.name == name}
-         if !artist == name 
-           self.name = name 
-           n.save
-           n
-         else
-           self.name
-         end
+   artist = self.all.find { |art| art.name == name}
+    if artist != name 
+      new_artist = self.new(name)
+      new_artist.save
+      new_artist
+    end
   end 
   
   def print_songs
